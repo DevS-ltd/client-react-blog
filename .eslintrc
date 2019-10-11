@@ -1,0 +1,34 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["prettier"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "all",
+      "useTabs": true,
+      "tabWidth": 2
+    }],
+    "indent": [2, "tab", {"SwitchCase": 1}],
+    "no-tabs": "off",
+    "class-methods-use-this": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-filename-extension": "off",
+    "react/prefer-stateless-function": "off",
+    "react/jsx-indent-props": ["error", "tab"],
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_id", "__typename"] }]
+  }
+}
