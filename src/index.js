@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { setApplicationVersion } from './helpers/application';
+
+setApplicationVersion('0.1.0');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
