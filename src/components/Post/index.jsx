@@ -19,6 +19,9 @@ const useStyles = theme => ({
 	loaderWrapper: {
 		minHeight: '100%',
 	},
+	postWrapper: {
+		padding: '2rem 0 0',
+	},
 	contentWrapper: {
 		padding: '2rem 0',
 	},
@@ -50,7 +53,7 @@ class Post extends React.Component {
 						<CircularProgress />
 					</Grid>
 				) : (
-					<Grid container justify="center">
+					<Grid container justify="center" className={classes.postWrapper}>
 						<Grid item xs={12} md={8}>
 							<Carousel photos={post.photos} />
 							<Box className={classes.contentWrapper}>
