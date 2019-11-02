@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuIcon from '@material-ui/icons/Menu';
-import { makeStyles } from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
+import { IconButton, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
 	menuButton: {

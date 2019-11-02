@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core';
-import MaterialLink from '@material-ui/core/Link';
+import {
+	Box,
+	Button,
+	Link as MaterialLink,
+	makeStyles,
+} from '@material-ui/core';
 
 import { BLOG, CONTACTS, LOGIN, REGISTER } from '../../../../constants/urls';
 
@@ -24,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 export default function NavList() {
 	const classes = useStyles();
 	return (
-		<div className={classes.navList}>
+		<Box className={classes.navList}>
 			<MaterialLink
 				color="inherit"
 				underline="none"
@@ -61,6 +64,6 @@ export default function NavList() {
 			>
 				Sign up for Free
 			</Button>
-		</div>
+		</Box>
 	);
 }

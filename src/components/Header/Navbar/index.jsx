@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import { makeStyles } from '@material-ui/core/styles';
+import { AppBar, Box, makeStyles, Toolbar } from '@material-ui/core';
 
 import Logo from '../../Logo';
 import NavList from './NavList';
@@ -30,9 +28,9 @@ export default function Navbar(props) {
 			<Toolbar className={classes.toolbar}>
 				<MenuButton onClickButton={props.onClickButton} />
 
-				<div className={classes.logoWrapper}>
+				<Box className={classes.logoWrapper}>
 					<Logo />
-				</div>
+				</Box>
 
 				<NavList />
 			</Toolbar>

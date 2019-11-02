@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
-import MaterialLink from '@material-ui/core/Link/Link';
+import { Link as MaterialLink, Typography } from '@material-ui/core';
 
 import { DASHBOARD } from '../../constants/urls';
 

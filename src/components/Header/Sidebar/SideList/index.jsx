@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import MaterialLink from '@material-ui/core/Link';
-import ListItemText from '@material-ui/core/ListItemText';
+import {
+	List,
+	Divider,
+	ListItem,
+	ListItemText,
+	Link as MaterialLink,
+} from '@material-ui/core';
 
 import Logo from '../../../Logo';
 import { BLOG, CONTACTS, LOGIN, REGISTER } from '../../../../constants/urls';
