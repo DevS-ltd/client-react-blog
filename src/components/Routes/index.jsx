@@ -4,7 +4,7 @@ import { Box, withStyles } from '@material-ui/core';
 
 import Header from '../Header';
 import Footer from '../Footer';
-import { DASHBOARD } from '../../constants/urls';
+import { BLOG } from '../../constants/urls';
 
 const styles = {
 	contentWrapper: {
@@ -14,6 +14,7 @@ const styles = {
 	},
 	content: {
 		flexGrow: 1,
+		paddingTop: '3.5rem',
 	},
 };
 
@@ -30,7 +31,7 @@ class Routes extends React.Component {
 							<Box className={classes.content}>
 								<Switch>
 									<Route
-										path={DASHBOARD}
+										path={BLOG}
 										exact
 										component={lazy(() => import('../Blog'))}
 									/>
