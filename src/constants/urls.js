@@ -1,6 +1,6 @@
 export const DASHBOARD = '/';
 export const BLOG = '/blog';
-export const POST = postId => `/blog/${postId}`;
+export const POST = postId => `/blog/${postId || ':postId'}`;
 export const CONTACTS = '/contacts';
 
 export const LOGIN = '/login';

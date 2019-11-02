@@ -8,6 +8,8 @@ import {
 	Link as MaterialLink,
 } from '@material-ui/core';
 
+import PostMeta from '../../Post/PostMeta';
+import PostTitle from '../../Post/PostTitle';
 import { POST } from '../../../constants/urls';
 
 const MAX_POST_ANNOTATION_LENGTH = 125;
@@ -34,12 +36,6 @@ const useStyles = makeStyles(theme => ({
 		},
 		width: '100%',
 	},
-	title: {
-		fontSize: '1.4rem',
-		lineHeight: 1,
-		fontWeight: 500,
-		paddingBottom: theme.spacing(2),
-	},
 	contentWrapper: {
 		[theme.breakpoints.only('xs')]: {
 			padding: '1.1rem 0 0',
@@ -53,9 +49,6 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.up('lg')]: {
 			padding: '2.65rem 0 3rem 3rem',
 		},
-	},
-	meta: {
-		fontSize: '.8rem',
 	},
 	annotation: {
 		fontSize: '.9rem',
@@ -102,13 +95,9 @@ export default function({ post }) {
 					underline="hover"
 					component={Link}
 				>
-					<Typography variant="h5" classes={{ h5: classes.title }}>
-						{post.title}
-					</Typography>
+					<PostTitle post={post} />
 				</MaterialLink>
-				<Typography paragraph className={classes.meta}>
-					By {post.author.name} {post.created_at}
-				</Typography>
+				<PostMeta post={post} />
 				<Typography paragraph className={classes.annotation}>
 					{post.annotation}
 				</Typography>

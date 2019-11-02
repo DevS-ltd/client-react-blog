@@ -62,14 +62,21 @@ class Blog extends React.Component {
 		this.setState({
 			isLoading: true,
 		});
-		const { data: posts, meta, links } = await PostService.getPosts(page);
 
-		this.setState(state => ({
-			posts: [].concat(state.posts, posts),
-			meta: { ...state.meta, ...meta },
-			links: { ...state.links, ...links },
-			isLoading: false,
-		}));
+		try {
+			const { data: posts, meta, links } = await PostService.getPosts(page);
+
+			this.setState(state => ({
+				posts: [].concat(state.posts, posts),
+				meta: { ...state.meta, ...meta },
+				links: { ...state.links, ...links },
+				isLoading: false,
+			}));
+		} catch (e) {
+			this.setState({
+				isLoading: false,
+			});
+		}
 	};
 }
 
