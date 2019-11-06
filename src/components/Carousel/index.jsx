@@ -23,7 +23,12 @@ class Carousel extends React.Component {
 						ref={el => (this.carousel = el)}
 					>
 						{photos.map(photo => (
-							<img key={photo.id} src={photo.url} style={{ width: '100%' }} />
+							<img
+								key={photo.id}
+								src={photo.url}
+								style={{ width: '100%' }}
+								alt=""
+							/>
 						))}
 					</AliceCarousel>
 				</Grid>
