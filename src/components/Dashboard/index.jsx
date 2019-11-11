@@ -31,11 +31,22 @@ const useStyles = makeStyles(theme => ({
 		},
 	},
 	contentTitle: {
-		fontSize: '6vh',
 		fontWeight: 500,
 		marginBottom: '1rem',
+		[theme.breakpoints.between('xs', 'sm')]: {
+			fontSize: '2.25rem',
+		},
+		[theme.breakpoints.only('md')]: {
+			fontSize: '2.5rem',
+		},
+		[theme.breakpoints.up('lg')]: {
+			fontSize: '3rem',
+		},
 	},
 	headTextWrapper: {
+		[theme.breakpoints.between('xs', 'sm')]: {
+			width: '100%',
+		},
 		[theme.breakpoints.up('md')]: {
 			paddingRight: '2rem',
 		},
@@ -47,7 +58,15 @@ const useStyles = makeStyles(theme => ({
 		},
 	},
 	contentDescription: {
-		fontSize: '2vh',
+		[theme.breakpoints.between('xs', 'sm')]: {
+			fontSize: '1rem',
+		},
+		[theme.breakpoints.up('lg')]: {
+			fontSize: '1.5rem',
+		},
+		[theme.breakpoints.up('xl')]: {
+			fontSize: '1.8rem',
+		},
 	},
 }));
 
@@ -58,10 +77,10 @@ export default function() {
 		<>
 			<Container maxWidth={false} className={classes.headWrapper}>
 				<Grid container className={classes.headContentWrapper}>
-					<Grid xs={12} md={6}>
+					<Grid item xs={12} md={6}>
 						<img src={MainImg} alt="Main Blog" className={classes.image} />
 					</Grid>
-					<Grid xs={12} md={6}>
+					<Grid item xs={12} md={6}>
 						<Grid container justify="flex-end">
 							<Box className={classes.headTextWrapper}>
 								<Typography variant="h1" className={classes.contentTitle}>
@@ -70,6 +89,7 @@ export default function() {
 								<Typography
 									paragraph={true}
 									className={classes.contentDescription}
+									component="div"
 								>
 									Project dependencies:
 									<ul>
