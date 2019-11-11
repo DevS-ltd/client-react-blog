@@ -4,7 +4,7 @@ import { Box, Grid, withStyles } from '@material-ui/core';
 
 import Header from '../Header';
 import Footer from '../Footer';
-import { BLOG, POST } from '../../constants/urls';
+import { DASHBOARD, BLOG, POST } from '../../constants/urls';
 
 const styles = theme => ({
 	contentWrapper: {
@@ -35,6 +35,11 @@ class Routes extends React.Component {
 							<Header />
 							<Grid container className={classes.content}>
 								<Switch>
+									<Route
+										path={DASHBOARD}
+										exact
+										component={lazy(() => import('../Dashboard'))}
+									/>
 									<Route
 										path={BLOG}
 										exact
