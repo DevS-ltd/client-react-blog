@@ -4,6 +4,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { CssBaseline, createMuiTheme } from '@material-ui/core';
 
 import './assets/fonts/Inter/inter.scss';
+import 'react-alice-carousel/lib/scss/alice-carousel.scss';
 
 import Routes from './components/Routes';
 

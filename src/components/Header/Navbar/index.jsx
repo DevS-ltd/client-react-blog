@@ -24,7 +24,7 @@ export default function Navbar(props) {
 	const classes = useStyles();
 
 	return (
-		<AppBar color="inherit" position="static">
+		<AppBar color="inherit" position="fixed">
 			<Toolbar className={classes.toolbar}>
 				<MenuButton onClickButton={props.onClickButton} />
 
