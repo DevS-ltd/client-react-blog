@@ -46,15 +46,15 @@ export default function() {
 							<Typography variant="h3" className={classes.subTitle}>
 								Email Us
 							</Typography>
-							<Link
-								href={`mailto:${process.env.REACT_APP_SOCIAL_EMAIL}`}
-								color="inherit"
-								underline="none"
-							>
-								<Typography paragraph={true}>
+							<Typography paragraph={true}>
+								<Link
+									href={`mailto:${process.env.REACT_APP_SOCIAL_EMAIL}`}
+									color="inherit"
+									underline="none"
+								>
 									{process.env.REACT_APP_SOCIAL_EMAIL}
-								</Typography>
-							</Link>
+								</Link>
+							</Typography>
 						</Box>
 						<Box>
 							<Typography variant="h3" className={classes.subTitle}>
