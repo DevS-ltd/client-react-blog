@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/styles';
+import { CssBaseline, createMuiTheme } from '@material-ui/core';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './assets/fonts/Inter/inter.scss';
+import 'react-alice-carousel/lib/scss/alice-carousel.scss';
+
+import Routes from './components/Routes';
+
+const theme = createMuiTheme({
+	typography: {
+		fontFamily: '"Inter", sans-serif',
+	},
+});
+
+export default function App() {
+	return (
+		<ThemeProvider theme={theme}>
+			<CssBaseline />
+			<BrowserRouter>
+				<Routes />
+			</BrowserRouter>
+		</ThemeProvider>
+	);
 }
-
-export default App;

@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { setDefaultAxios } from './helpers/axios';
+import { setApplicationVersion } from './helpers/application';
+
+setApplicationVersion('1.0.0');
+
+setDefaultAxios();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
