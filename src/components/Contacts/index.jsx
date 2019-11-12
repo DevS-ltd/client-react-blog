@@ -5,7 +5,6 @@ import {
 	Link,
 	Container,
 	Typography,
-	ListItemText,
 	makeStyles,
 } from '@material-ui/core';
 
@@ -47,17 +46,15 @@ export default function() {
 							<Typography variant="h3" className={classes.subTitle}>
 								Email Us
 							</Typography>
-							<Typography paragraph={true}>
-								<Link
-									href={`mailto:${process.env.REACT_APP_SOCIAL_EMAIL}`}
-									color="inherit"
-									underline="none"
-								>
-									<ListItemText
-										secondary={process.env.REACT_APP_SOCIAL_EMAIL}
-									/>
-								</Link>
-							</Typography>
+							<Link
+								href={`mailto:${process.env.REACT_APP_SOCIAL_EMAIL}`}
+								color="inherit"
+								underline="none"
+							>
+								<Typography paragraph={true}>
+									{process.env.REACT_APP_SOCIAL_EMAIL}
+								</Typography>
+							</Link>
 						</Box>
 						<Box>
 							<Typography variant="h3" className={classes.subTitle}>
