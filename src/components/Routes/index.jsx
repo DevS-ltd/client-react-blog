@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Box, Grid, withStyles } from '@material-ui/core';
 
+import Loader from '../Loader';
 import Header from '../Header';
 import Footer from '../Footer';
 import { DASHBOARD, BLOG, POST, CONTACTS } from '../../constants/urls';
@@ -28,7 +29,7 @@ class Routes extends React.Component {
 		const { classes } = this.props;
 
 		return (
-			<Suspense fallback="loading">
+			<Suspense fallback={<Loader />}>
 				<Switch>
 					<Route>
 						<Box className={classes.contentWrapper}>
