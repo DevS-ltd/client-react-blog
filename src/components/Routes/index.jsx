@@ -29,12 +29,12 @@ class Routes extends React.Component {
 		const { classes } = this.props;
 
 		return (
-			<Suspense fallback={<Loader />}>
-				<Switch>
-					<Route>
-						<Box className={classes.contentWrapper}>
-							<Header />
-							<Grid container className={classes.content}>
+			<Switch>
+				<Route>
+					<Box className={classes.contentWrapper}>
+						<Header />
+						<Grid container className={classes.content}>
+							<Suspense fallback={<Loader />}>
 								<Switch>
 									<Route
 										path={DASHBOARD}
@@ -58,12 +58,12 @@ class Routes extends React.Component {
 									/>
 									<Route exact component={lazy(() => import('../NotFound'))} />
 								</Switch>
-							</Grid>
-							<Footer />
-						</Box>
-					</Route>
-				</Switch>
-			</Suspense>
+							</Suspense>
+						</Grid>
+						<Footer />
+					</Box>
+				</Route>
+			</Switch>
 		);
 	}
 }
