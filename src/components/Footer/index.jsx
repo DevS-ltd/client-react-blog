@@ -12,15 +12,7 @@ import {
 	Link as MaterialLink,
 } from '@material-ui/core';
 
-import {
-	FacebookIcon,
-	GithubIcon,
-	LinkedinIcon,
-	SkypeIcon,
-	TelegramIcon,
-	ViberIcon,
-	WhatsappIcon,
-} from '../Icons';
+import SocialLinks from '../SocialLinks';
 import { BLOG, CONTACTS } from '../../constants/urls';
 
 const useStyles = makeStyles(theme => ({
@@ -50,50 +42,12 @@ const useStyles = makeStyles(theme => ({
 	link: {
 		fontWeight: 500,
 	},
-	socialLink: {
-		fillRule: 'evenodd',
-		fill: '#ccc',
-		'&:hover': {
-			fill: '#aaa',
-		},
-	},
 	socialLinkWrapper: {
 		[theme.breakpoints.down('xs')]: {
 			padding: `${theme.spacing(1.5)}px 0`,
 		},
 	},
 }));
-
-const socialLinks = [
-	{
-		link: process.env.REACT_APP_SOCIAL_FACEBOOK,
-		icon: FacebookIcon,
-	},
-	{
-		link: process.env.REACT_APP_SOCIAL_LINKEDIN,
-		icon: LinkedinIcon,
-	},
-	{
-		link: process.env.REACT_APP_SOCIAL_GITHUB,
-		icon: GithubIcon,
-	},
-	{
-		link: process.env.REACT_APP_SOCIAL_SKYPE,
-		icon: SkypeIcon,
-	},
-	{
-		link: process.env.REACT_APP_SOCIAL_WHATSAPP,
-		icon: WhatsappIcon,
-	},
-	{
-		link: process.env.REACT_APP_SOCIAL_TELEGRAM,
-		icon: TelegramIcon,
-	},
-	{
-		link: process.env.REACT_APP_SOCIAL_VIBER,
-		icon: ViberIcon,
-	},
-];
 
 export default function Footer() {
 	const classes = useStyles();
@@ -154,16 +108,7 @@ export default function Footer() {
 							spacing={1}
 							className={classes.socialLinkWrapper}
 						>
-							{socialLinks.map(
-								({ link, icon: Icon }, key) =>
-									Boolean(link) && (
-										<Grid key={key} item>
-											<a href={link} target="_blank" rel="noopener noreferrer">
-												<Icon className={classes.socialLink} />
-											</a>
-										</Grid>
-									),
-							)}
+							<SocialLinks />
 						</Grid>
 						{Boolean(process.env.REACT_APP_SOCIAL_EMAIL) && (
 							<Grid item container justify="center" alignItems="center">

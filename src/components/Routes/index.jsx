@@ -4,7 +4,7 @@ import { Box, Grid, withStyles } from '@material-ui/core';
 
 import Header from '../Header';
 import Footer from '../Footer';
-import { DASHBOARD, BLOG, POST } from '../../constants/urls';
+import { DASHBOARD, BLOG, POST, CONTACTS } from '../../constants/urls';
 
 const styles = theme => ({
 	contentWrapper: {
@@ -49,6 +49,11 @@ class Routes extends React.Component {
 										path={POST()}
 										exact
 										component={lazy(() => import('../Post'))}
+									/>
+									<Route
+										path={CONTACTS}
+										exact
+										component={lazy(() => import('../Contacts'))}
 									/>
 									<Route exact component={lazy(() => import('../NotFound'))} />
 								</Switch>
