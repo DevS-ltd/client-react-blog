@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import { setDefaultAxios } from './helpers/axios';
 import { setApplicationVersion } from './helpers/application';
 
-setApplicationVersion('0.1.0');
+setApplicationVersion('1.0.0');
 
 setDefaultAxios();
 
